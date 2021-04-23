@@ -22,7 +22,6 @@ def main():
         moviesplit = movie_tag.text.split()
         year = moviesplit[-1] # last item 
         return year
-
     years = [get_year(tag) for tag in movietags]
     actors_list =[tag['title'] for tag in inner_movietags] # access attribute 'title'
     titles = [tag.text for tag in inner_movietags]
@@ -33,7 +32,7 @@ def main():
     #while(True):
     idx = random.randrange(0, n_movies)
         
-    print(f'{titles[idx]} {years[idx]}, Rating: {ratings[idx]:.1f}, Starring: {actors_list[idx]}')
+    prin(f'{titles[idx]} {years[idx]}, Rating: {ratings[idx]:.1f}, Starring: {actors_list[idx]}')
 
     #user_input = input('Do you want another movie (y/[n])? ')
     #if user_input != 'y':
