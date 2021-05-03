@@ -1,4 +1,4 @@
-#somechange
+
 import random
 import requests
 from bs4 import BeautifulSoup
@@ -11,9 +11,9 @@ def main():
     response = requests.get(URL)
 
     soup = BeautifulSoup(response.text, 'html.parser')
-    #soup = BeautifulSoup(response.text, 'lxml') # faster
+    soup = BeautifulSoup(response.text, 'lxml') # faster
 
-    # print(soup.prettify())
+     print(soup.prettify())
 
     movietags = soup.select('td.titleColumn')
     inner_movietags = soup.select('td.titleColumn a')
